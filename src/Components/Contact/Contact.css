@@ -1,0 +1,44 @@
+.ContactContainer{
+    padding: 35px 0 55px;
+    background-color: #263137;
+    height: calc( 100% - 55px );
+}
+.ContactScdTxt{
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.3em;
+    color:#e1e1e1
+}
+.ContactPrimTxt{
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: 0.3em;
+    color : #e1e1e1;
+    margin-bottom:20px
+}
+input{
+    all: unset;
+}
+.inputBox{
+    height: 70px;
+    width: 700px;
+    border-radius: 10px;
+    border: 3px solid #f4f4f4;
+    color: #f4f4f4;
+    font-size: 24px;    
+    line-height: 31px;
+    letter-spacing: 0.3em;
+    padding: 0 37px
+}
+.inputBox.big{
+    height: 193px;
+}
+textarea{
+    all : unset
+}
+textarea.inputBox{
+    padding: 30px 35px
+}
+.mb30{
+    margin-bottom: 30px;
+}

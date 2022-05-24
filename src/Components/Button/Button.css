@@ -1,0 +1,30 @@
+
+.btn{
+    outline: 0;
+    border: none;
+    border-radius: 10px;
+    padding:  10px 23px;
+    background-color: #62554F;
+    color: #f4f4f4;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+.btnMr{
+    margin-right : 11px
+}
+.btn.white{
+    background: #F4F4F4;
+    border-radius: 10px;
+    font-family: "PTSansBold";
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.3em;
+    color: #263137;
+}
+.btn.smlTpBtm{
+    padding: 5px 29px 5px 23px;
+    font-family: "PTSansBold";
+    align-self: flex-end;
+}

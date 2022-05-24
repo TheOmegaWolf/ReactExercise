@@ -1,0 +1,28 @@
+.HeroContainer{
+    background-color: #e1e1e1;
+    padding: 75px 100px;
+    height: calc( 100% - 55px );
+}
+.Heading{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: "PTSansBold";
+}
+.Heading.two{
+    font-size: 40px;
+    line-height: 52px;
+    color: #62554F;
+    text-transform: uppercase;
+}
+.content{
+    margin: 20px 0;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.1em;
+}
+.imgGap{
+    margin-right: 80px;
+}

@@ -1,0 +1,25 @@
+.projectsContainer{
+    background-color: #62554f;
+    padding: 50px 100px;
+    height: calc( 100% - 55px );
+}
+.ProjectsScdHeading{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.3em;
+    color: #e1e1e1;
+}
+.ProjectsPrimHeading{
+    font-family: "PTSansBold";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: 0.3em;
+    color: #e1e1e1;
+    margin: 5px 0 20px;
+}
+.flGap{
+    column-gap: 27px;
+    margin-bottom: 40px;
+}

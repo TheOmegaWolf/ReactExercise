@@ -1,0 +1,28 @@
+.navCntr{
+    background-color: #f4f4f4;
+    height: 55px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.navInrCntr{
+    padding: 15px 25px;
+}
+.logo{
+    font-family: 'PTSansBold';
+    font-size: 20px;
+}
+.linkItem{
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.3em;
+    /* font-weight: 400; */
+    text-transform: uppercase;
+    padding: 0 4px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.linkItem.active{
+    border-bottom : 4px solid #483f40
+}
+.linkItem:last-child{
+    margin-right: 20px;
+}
