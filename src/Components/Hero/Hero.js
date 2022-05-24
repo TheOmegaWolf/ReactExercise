@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div className='dflex alignVertical HeroContainer' id={"Home"}>
         <div className='imgGap'>
-            <Image img={img} />
+            <Image img={img} alt="DisplayPic" />
         </div>
         <div>
             <div className='Heading'> Scarlett Johansson</div>

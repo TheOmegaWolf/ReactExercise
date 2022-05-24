@@ -5,7 +5,7 @@ export default function Image(props) {
   return (
     <div className='imgContainer'>
         {!empty?
-        <img src={(img)} width={"250px"} height={"250px"} className={'imageContainer'}/>
+        <img src={(img)} width={"250px"} height={"250px"} className={'imageContainer'} alt="DisplayPic"/>
         :<div className={"empty"}>
         </div>}
     </div>
