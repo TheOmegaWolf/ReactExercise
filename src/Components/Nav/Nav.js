@@ -20,7 +20,7 @@ export default class Nav extends Component {
       const {links} = this.state;
       let newLinks = {};
       Object.keys(links).map((link)=>{
-          if(link == activelink){
+          if(link === activelink){
               newLinks[activelink] = true;
               return;
           }
@@ -38,7 +38,7 @@ export default class Nav extends Component {
                 SJ.
             </div>
             <div className='flexshrink dflex'>
-               {Object.keys(links).map((link)=>(<Link activeClass={links[link] == true ? "active" : ""} to={link} spy={true} smooth={true}><div className={links[link] == true? "linkItem active" : "linkItem"} onClick={() => this.changeActive(link)}>{link}</div></Link>))}
+               {Object.keys(links).map((link)=>(<Link activeClass={links[link] === true ? "active" : ""} to={link} spy={true} smooth={true}><div className={links[link] === true? "linkItem active" : "linkItem"} onClick={() => this.changeActive(link)}>{link}</div></Link>))}
             </div>
           </div>
       </div>

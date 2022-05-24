@@ -18,7 +18,7 @@ export default function About() {
         </div>
         <div className='dflex HeroContainer'>
             <div className='imgGap'>
-                <Image img={img} />
+                <Image img={img} alt="image" />
             </div>
             <div>
                 <div className='content noTopSpace'>I implement user interface design and solve user problems with HTML, CSS and Javascript. I have 2 years of making products that solve user problems and Implementing responsive websites.</div>
