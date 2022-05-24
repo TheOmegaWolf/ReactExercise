@@ -1,0 +1,35 @@
+.scdHeading{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #e1e1e1;
+}
+.primHeading{
+    font-family: "PTSansBold";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    color: #e1e1e1;
+    margin: 5px 0 20px;
+}
+.scdHeading, .primHeading{
+    letter-spacing: 0.3em;
+}
+.underline{
+    height: 3px;
+    width: 360px;
+    background-color: #f4f4f4;
+    display: inline-flex;
+}
+.underline.dark{
+    background-color: #483f40;
+}
+.darkTxt div{
+    color : #000 
+}
+.underline.mb60{
+    margin-bottom: 60px;
+}
+.uppercase{
+    text-transform: uppercase;
+}

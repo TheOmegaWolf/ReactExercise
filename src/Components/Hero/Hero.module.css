@@ -2,6 +2,7 @@
     background-color: #e1e1e1;
     padding: 75px 100px;
     height: calc( 100% - 55px );
+    width: calc( 100% - 200px );
 }
 .Heading{
     font-weight: 700;

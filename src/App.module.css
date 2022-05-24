@@ -1,4 +1,4 @@
-body, html, .Container, #root {
+body, html, .Container {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -6,18 +6,6 @@ body, html, .Container, #root {
   font-family: PTSans;
 }
 
-.underline{
-  height: 3px;
-  width: 360px;
-  background-color: #f4f4f4;
-  display: inline-flex;
-}
-.underline.dark{
-  background-color: #483F40;
-}
-.underline.mb60{
-  margin-bottom: 60px;
-}
 
 @font-face {
   font-family: PTSans;

@@ -1,4 +1,4 @@
-import './Nav.css'
+import style from './Nav.module.css'
 import React, { Component } from 'react'
 import { Link } from 'react-scroll';
 export default class Nav extends Component {
@@ -33,17 +33,18 @@ export default class Nav extends Component {
   render() {
     const { links } = this.state
     console.log(links)
+    const {active, linkItem} = style;
+    const activeLink  = linkItem+" "+active
     return (
-      <div className='navCntr'>
-        <div className='navInrCntr dflex'>
-          <div className='logo flexgrow'>
+      <div className={style.navCntr}>
+        <div className={`dflex ${style.navInrCntr}`}>
+          <div className={`flexgrow ${style.logo}`}>
             SJ.
           </div>
-          <div className='flexshrink dflex'>
-            {/* {Object.keys(links).map((link) => (return <Link activeClass={links[link] === true ? "active" : ""} to={link} spy={true} smooth={true}><div className={links[link] === true ? "linkItem active" : "linkItem"} onClick={() => this.changeActive(link)}>{link}</div></Link>))} */}
+          <div className={'flexshrink dflex'}>
             {Object.keys(links).map((link) => {
               return (
-                <Link activeClass={links[link] === true ? "active" : ""} to={link} spy={true} smooth={true}><div className={links[link] === true ? "linkItem active" : "linkItem"} onClick={() => this.changeActive(link)}>{link}</div></Link>
+                <Link activeClass={links[link] === true ? active : ""} to={link} spy={true} smooth={true}><div className={links[link] === true ? activeLink : linkItem} onClick={() => this.changeActive(link)}>{link}</div></Link>
               )
             })}
           </div>

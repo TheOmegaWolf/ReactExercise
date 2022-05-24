@@ -1,4 +1,4 @@
-import './App.css';
+import style from './App.module.css';
 import './flex.css'
 import Nav from './Components/Nav/Nav';
 import Hero from './Components/Hero/Hero';
@@ -7,7 +7,7 @@ import About from "./Components/About/About"
 import Contact from './Components/Contact/Contact';
 function App() {
   return (
-    <div className="Container">
+    <div className={style.Container}>
       <Nav />
       <Hero />
       <Projects/>

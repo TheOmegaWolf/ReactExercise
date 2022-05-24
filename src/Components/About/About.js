@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import './About.css'
-import Image from '../Image/Image'
+import style from './About.module.css'
 import img from "../../Images/Image.png"
 import Button from '../Button/Button'
+import Avatar from '../Avatar/Avatar'
+import Title from '../Title/Title'
 
 export default function About() {
   const [skills, setSkills] = useState([]);
@@ -10,19 +11,17 @@ export default function About() {
       setSkills(["HTML", "CSS", "Javascript", "Bootstrap", "Php", "Python", "C++", "Wordpress"])
   },[])
   return (
-     <div class="dflex flexcolumn alignBoth AboutCntr"  id={"About"}>
-        <div className={"AboutHdr dflex alignBoth flexcolumn"}>
-            <div className='aboutScdHdrTxt'>Who am i</div>
-            <div className='aboutPrimHdrTxt'>About</div>
-            <div className='underline dark'></div>
+     <div className={`dflex flexcolumn alignBoth ${style.AboutCntr}`}  id={"About"}>
+        <div className={`${style.AboutHdr} dflex alignBoth flexcolumn`}>
+            <Title scdTxt = {"Who am i"} primTxt={"About"} dark={true} upper={true}/>
         </div>
-        <div className='dflex HeroContainer'>
-            <div className='imgGap'>
-                <Image img={img} alt="DisplayPic" />
+        <div className={`dflex ${style.AboutMainContainer}`}>
+            <div className={style.imgGap}>
+                <Avatar img={img} />
             </div>
             <div>
-                <div className='content noTopSpace'>I implement user interface design and solve user problems with HTML, CSS and Javascript. I have 2 years of making products that solve user problems and Implementing responsive websites.</div>
-                <div className='skillsHdg'>Skills</div>
+                <div className={style.content}>I implement user interface design and solve user problems with HTML, CSS and Javascript. I have 2 years of making products that solve user problems and Implementing responsive websites.</div>
+                <div className={style.skillsHdg}>Skills</div>
                 <div className='dflex'>
                     {skills.map((skill)=>(<Button text={skill.toUpperCase()} mr={true} />))}
                 </div>

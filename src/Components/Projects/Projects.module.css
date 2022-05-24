@@ -1,0 +1,10 @@
+.projectsContainer{
+    background-color: #62554f;
+    padding: 50px 100px;
+    height: calc( 100% - 55px );
+}
+
+.flGap{
+    column-gap: 27px;
+    margin-bottom: 40px;
+}

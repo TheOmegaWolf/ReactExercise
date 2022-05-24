@@ -1,7 +1,7 @@
 import React from 'react'
-import './Button.css'
+import style from './Button.module.css'
 export default function Button({text, mr, white, smlTpBtm}) {
   return (
-    <button className={"btn"+ (mr?" btnMr ":"") + (white? " white " : "") + (smlTpBtm ? " smlTpBtm " : "")}> {text} </button>
+    <button className={style.btn+ (mr? " " + style.btnMr + " ":"") + (white? " " + style.white +" ": "") + (smlTpBtm ? " "+ style.smlTpBtm + " " : "")}> {text} </button>
   )
 }
