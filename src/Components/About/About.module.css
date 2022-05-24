@@ -5,7 +5,9 @@
     letter-spacing: 0.1em;
 }
 .AboutCntr{
-    height: calc( 100% );
+    height: calc( 100% - 55px );
+    background-color: #e1e1e1;
+    display: flex;
 }
 .skillsHdg{
     font-size: 24px;
@@ -16,14 +18,11 @@
     margin-bottom: 10px;
 }
 .AboutHdr{
-    background-color: #e1e1e1;
     padding-top: 35px ;
     width: 100%;
 }
 .AboutMainContainer{
-    background-color: #e1e1e1;
     padding: 75px 100px;
-    height: calc( 100% - 55px );
     width: calc( 100% - 200px );
 }
 .imgGap{

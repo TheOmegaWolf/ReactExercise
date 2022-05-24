@@ -29,6 +29,7 @@ export default class Nav extends Component {
       return newLinks;
     })
     this.setState({ links: newLinks })
+    this.props.setLinks(newLinks);
   }
   render() {
     const { links } = this.state
