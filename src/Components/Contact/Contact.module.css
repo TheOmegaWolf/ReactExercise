@@ -16,10 +16,10 @@
     color : #e1e1e1;
     margin-bottom:20px
 }
-input{
+.ContactContainer input{
     all: unset;
 }
-.inputBox{
+.ContactContainer .inputBox{
     height: 70px;
     width: 700px;
     border-radius: 10px;
@@ -30,15 +30,15 @@ input{
     letter-spacing: 0.3em;
     padding: 0 37px
 }
-.inputBox.big{
+.ContactContainer .inputBox.big{
     height: 193px;
 }
-textarea{
+.ContactContainer textarea{
     all : unset
 }
-textarea.inputBox{
+.ContactContainer textarea.inputBox{
     padding: 30px 35px
 }
-.mb30{
+.ContactContainer .mb30{
     margin-bottom: 30px;
 }

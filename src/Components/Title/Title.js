@@ -7,7 +7,7 @@ export default function Title({scdTxt, primTxt, dark, upper}) {
         <div className={style.primHeading}>{primTxt}</div>
         {dark ? 
         <div className={style.underline+ " " + style.dark}></div> :
-        <div className={style.underline+ " " + style.mb60}></div>
+        <div className={`${style.underline} ${style.mb60}`}></div>
         }
     </div>
   )

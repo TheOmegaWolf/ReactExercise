@@ -26,3 +26,6 @@
 .linkItem:last-child{
     margin-right: 20px;
 }
+.navInrCntr a{
+    all : unset
+}

@@ -5,30 +5,21 @@ import Hero from './Components/Hero/Hero';
 import Projects from './Components/Projects/Projects';
 import About from "./Components/About/About"
 import Contact from './Components/Contact/Contact';
-import { useState } from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 function App() {
-  const [links, setLinks] = useState({
-    "Home": true,
-    "Projects": false,
-    "About": false,
-    "Contact": false
-  })
-  var elem = "Home"; 
-  Object.keys(links).map((link)=> {
-    if(links[link]){
-      elem = (link === "Home") ? "Hero" : link;  
-      return link;
-    }
-    return link;
-  })
   return (
-    <div className={style.Container}>
-      <Nav setLinks={setLinks}/>
-      {elem === "Hero" ? <Hero /> : <></>}
-      {elem === "Projects" ? <Projects /> : <></>}
-      {elem === "About" ? <About/> : <></>}
-      {elem === "Contact" ? <Contact/> : <></>}
-    </div>
+    <BrowserRouter>
+      <div className={style.Container}>
+        <Nav/>
+        <Routes>
+          <Route path={"/"} element={<Hero/>}></Route>
+          <Route path={"/Home"} element={<Hero/>}></Route>
+          <Route path={"/Projects"} element={<Projects/>}></Route>
+          <Route path={"/About"} element={<About/>}></Route>
+          <Route path={"/Contact"} element={<Contact/>}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

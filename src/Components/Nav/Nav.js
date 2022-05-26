@@ -1,6 +1,6 @@
 import style from './Nav.module.css'
 import React, { Component } from 'react'
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 export default class Nav extends Component {
   state = {
     links: {
@@ -29,7 +29,6 @@ export default class Nav extends Component {
       return newLinks;
     })
     this.setState({ links: newLinks })
-    this.props.setLinks(newLinks);
   }
   render() {
     const { links } = this.state
@@ -45,7 +44,7 @@ export default class Nav extends Component {
           <div className={'flexshrink dflex'}>
             {Object.keys(links).map((link) => {
               return (
-                <Link activeClass={links[link] === true ? active : ""} to={link} spy={true} smooth={true}><div className={links[link] === true ? activeLink : linkItem} onClick={() => this.changeActive(link)}>{link}</div></Link>
+                <Link to={`/${link}`}><div className={links[link] === true ? activeLink : linkItem} onClick={() => this.changeActive(link)}>{link}</div></Link>
               )
             })}
           </div>
