@@ -13,6 +13,7 @@ export default function About(props) {
           var temp = string;
           temp=" About";
           toggleClass(temp, "Add")
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function About(props) {
       const {toggleClass} = props;
       toggleClass("Contact", "Delete")
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
   return (
