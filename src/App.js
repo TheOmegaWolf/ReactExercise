@@ -16,7 +16,7 @@ function App() {
   const [currCls, setCurrCls] = useState("");
   var elem = "Home";
   const toggleClass = (name, type) =>{
-    if(type=="Add")
+    if(type==="Add")
     {
       console.log("name:",name, "added")
       setCurrCls(name);
