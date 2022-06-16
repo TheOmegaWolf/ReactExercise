@@ -14,6 +14,7 @@ export default function Contact(props) {
         var temp = string;
         temp=" Contact";
         toggleClass(temp, "Add")
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function Contact(props) {
       const {toggleClass} = props;
       toggleClass("Contact", "Delete")
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
   return (
