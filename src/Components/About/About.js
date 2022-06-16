@@ -5,11 +5,23 @@ import Button from '../Button/Button'
 import Avatar from '../Avatar/Avatar'
 import Title from '../Title/Title'
 
-export default function About() {
+export default function About(props) {
   const [skills, setSkills] = useState([]);
   useEffect(()=>{
       setSkills(["HTML", "CSS", "Javascript", "Bootstrap", "Php", "Python", "C++", "Wordpress"])
+      const {toggleClass, string} = props;
+          var temp = string;
+          temp=" About";
+          toggleClass(temp, "Add")
   },[])
+
+  useEffect(() => {
+    return () => {
+      const {toggleClass} = props;
+      toggleClass("Contact", "Delete")
+    }
+  },[])
+  
   return (
      <div className={`dflex flexcolumn alignBoth ${style.AboutCntr}`}  id={"About"}>
         <div className={`${style.AboutHdr} dflex alignBoth flexcolumn`}>

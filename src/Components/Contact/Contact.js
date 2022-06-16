@@ -1,14 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from '../Button/Button';
 import Title from '../Title/Title';
 import style from "./Contact.module.css"
-export default function Contact() {
+export default function Contact(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const inputStyle = style.inputBox + " " + style.mb30;
   const inputStyleBig = inputStyle + " " + style.big;
 
+  useEffect(() => {
+    const {toggleClass, string} = props;
+        var temp = string;
+        temp=" Contact";
+        toggleClass(temp, "Add")
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      const {toggleClass} = props;
+      toggleClass("Contact", "Delete")
+    }
+  },[])
+  
   return (
     <div className={`${style.ContactContainer} dflex alignBoth`} id="Contact">
         <div className='dflex flexcolumn alignBoth'>

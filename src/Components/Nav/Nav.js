@@ -16,7 +16,6 @@ export default class Nav extends Component {
   }
   changeActive = (activelink) => {
     //   console.log('hi')
-    console.log(activelink)
     const { links } = this.state;
     let newLinks = {};
     Object.keys(links).map((link) => {
@@ -33,7 +32,6 @@ export default class Nav extends Component {
   }
   render() {
     const { links } = this.state
-    console.log(links)
     const {active, linkItem} = style;
     const activeLink  = linkItem+" "+active
     return (

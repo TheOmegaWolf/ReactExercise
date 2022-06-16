@@ -13,7 +13,19 @@ function App() {
     "About": false,
     "Contact": false
   })
-  var elem = "Home"; 
+  const [currCls, setCurrCls] = useState("");
+  var elem = "Home";
+  const toggleClass = (name, type) =>{
+    if(type=="Add")
+    {
+      console.log("name:",name, "added")
+      setCurrCls(name);
+    }
+    else{
+      console.log(name, type)
+      setCurrCls("")
+    }
+  }
   Object.keys(links).map((link)=> {
     if(links[link]){
       elem = (link === "Home") ? "Hero" : link;  
@@ -22,12 +34,12 @@ function App() {
     return link;
   })
   return (
-    <div className={style.Container}>
+    <div className={`${style.Container}${currCls}`}>
       <Nav setLinks={setLinks}/>
-      {elem === "Hero" ? <Hero /> : <></>}
-      {elem === "Projects" ? <Projects /> : <></>}
-      {elem === "About" ? <About/> : <></>}
-      {elem === "Contact" ? <Contact/> : <></>}
+      {elem === "Hero" ? <Hero toggleClass={toggleClass} string={currCls} name={"Home"}/> : <></>}
+      {elem === "Projects" ? <Projects toggleClass={toggleClass} string={currCls} name={"Projects"}/> : <></>}
+      {elem === "About" ? <About toggleClass={toggleClass} string={currCls} name={"About"}/> : <></>}
+      {elem === "Contact" ? <Contact toggleClass={toggleClass} string={currCls} name={"Contact"}/> : <></>}
     </div>
   );
 }
