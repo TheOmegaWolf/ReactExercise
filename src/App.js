@@ -5,7 +5,8 @@ import Hero from './Components/Hero/Hero';
 import Projects from './Components/Projects/Projects';
 import About from "./Components/About/About"
 import Contact from './Components/Contact/Contact';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { ThemeProvider } from './Components/Context/ThemeContext';
 function App() {
   const [links, setLinks] = useState({
     "Home": true,
@@ -13,6 +14,16 @@ function App() {
     "About": false,
     "Contact": false
   })
+  
+ const [theme, setTheme] = useState("")
+  function toggleTheme(){
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  }
+  
+  useEffect(() => {
+    toggleTheme()
+  // eslint-disable-next-line
+  }, [])
   const [currCls, setCurrCls] = useState("");
   var elem = "Home";
   const toggleClass = (name, type) =>{
@@ -34,14 +45,17 @@ function App() {
     return link;
   })
   return (
-    <div className={`${style.Container}${currCls}`}>
-      <Nav setLinks={setLinks}/>
-      {elem === "Hero" ? <Hero toggleClass={toggleClass} string={currCls} name={"Home"}/> : <></>}
-      {elem === "Projects" ? <Projects toggleClass={toggleClass} string={currCls} name={"Projects"}/> : <></>}
-      {elem === "About" ? <About toggleClass={toggleClass} string={currCls} name={"About"}/> : <></>}
-      {elem === "Contact" ? <Contact toggleClass={toggleClass} string={currCls} name={"Contact"}/> : <></>}
-    </div>
+    <ThemeProvider value={{theme, toggleTheme}}>
+      <div className={`${style.Container}${currCls}`}>
+        <Nav setLinks={setLinks} toggleTheme={toggleTheme}/>
+        {elem === "Hero" ? <Hero toggleClass={toggleClass} string={currCls} name={"Home"} toggleTheme={toggleTheme}/> : <></>}
+        {elem === "Projects" ? <Projects toggleClass={toggleClass} string={currCls} name={"Projects"}/> : <></>}
+        {elem === "About" ? <About toggleClass={toggleClass} string={currCls} name={"About"}/> : <></>}
+        {elem === "Contact" ? <Contact toggleClass={toggleClass} string={currCls} name={"Contact"}/> : <></>}
+      </div>
+    </ThemeProvider>
   );
 }
 
 export default App;
+

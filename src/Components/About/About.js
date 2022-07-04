@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import style from './About.module.css'
 import img from "../../Images/Image.png"
 import Button from '../Button/Button'
 import Avatar from '../Avatar/Avatar'
 import Title from '../Title/Title'
+import { ThemeConsumer } from '../Context/ThemeContext'
 
 export default function About(props) {
   const [skills, setSkills] = useState([]);
@@ -23,9 +24,9 @@ export default function About(props) {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
-  
+  const value = useContext(ThemeConsumer)
   return (
-     <div className={`dflex flexcolumn alignBoth ${style.AboutCntr}`}  id={"About"}>
+     <div className={`dflex flexcolumn alignBoth ${style.AboutCntr} ${value.theme!==''?style[value.theme]:style['light']}`}  id={"About"}>
         <div className={`${style.AboutHdr} dflex alignBoth flexcolumn`}>
             <Title scdTxt = {"Who am i"} primTxt={"About"} dark={true} upper={true}/>
         </div>

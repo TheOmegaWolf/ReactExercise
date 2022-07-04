@@ -4,9 +4,14 @@
     width: 250px;
 }
 .empty{
-    background-color: #e1e1e1;
     border-radius: 10px;
     height: 250px;
     width: 250px;
     display: inline-flex;
+}
+.light .empty{
+    background-color: #e1e1e1;
+}
+.dark .empty{
+    background-color: #3E4652;
 }

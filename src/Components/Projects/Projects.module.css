@@ -1,9 +1,13 @@
 .projectsContainer{
-    background-color: #62554f;
     padding: 50px 100px;
     height: calc( 100% - 155px );
 }
-
+.light.projectsContainer{
+    background-color: #62554f;
+}
+.dark.projectsContainer{
+    background-color: #232B38;
+}
 .flGap{
     column-gap: 27px;
     margin-bottom: 40px;

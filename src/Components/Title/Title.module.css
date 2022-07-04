@@ -24,7 +24,7 @@
 .underline.dark{
     background-color: #483f40;
 }
-.darkTxt div{
+.light.darkTxt div{
     color : #000 
 }
 .underline.mb60{
@@ -32,4 +32,10 @@
 }
 .uppercase{
     text-transform: uppercase;
+}
+.dark.darkTxt div{
+    color : #f4f4f4 
+}
+.dark .underline.dark{
+    background-color: #f4f4f4;
 }

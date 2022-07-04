@@ -1,8 +1,13 @@
 .HeroContainer{
-    background-color: #e1e1e1;
     padding: 75px 100px;
     height: calc( 100% - 205px );
     width: calc( 100% - 200px );
+}
+.light.HeroContainer{
+    background-color: #e1e1e1;
+}
+.dark.HeroContainer{
+    background-color: #232B38;
 }
 .Heading{
     font-weight: 700;
@@ -12,17 +17,34 @@
     text-transform: uppercase;
     font-family: "PTSansBold";
 }
+.light .Heading{
+    color:  #000;
+}
+.dark .Heading{
+    color: #fff;
+}
 .Heading.two{
     font-size: 40px;
     line-height: 52px;
-    color: #62554F;
     text-transform: uppercase;
+}
+.light .Heading.two{
+    color: #62554F;
+}
+.dark .Heading.two{
+    color: #D48A68
 }
 .content{
     margin: 20px 0;
     font-size: 24px;
     line-height: 31px;
     letter-spacing: 0.1em;
+}
+.light .content{
+    color: #000;
+}
+.dark .content{
+    color: #fff;
 }
 .imgGap{
     margin-right: 80px;

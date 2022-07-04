@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Button from '../Button/Button';
+import { ThemeContext } from '../Context/ThemeContext';
 import Title from '../Title/Title';
 import style from "./Contact.module.css"
 export default function Contact(props) {
@@ -24,9 +25,9 @@ export default function Contact(props) {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
-  
+  const value = useContext(ThemeContext)
   return (
-    <div className={`${style.ContactContainer} dflex alignBoth`} id="Contact">
+    <div className={`${style.ContactContainer} dflex alignBoth ${value.theme!==''?style[value.theme]:style['light']}`} id="Contact">
         <div className='dflex flexcolumn alignBoth'>
             <Title scdTxt={"get in touch"} primTxt={"Contact"} upper={true} />
             <input type="text" placeholder='Name' value={name} onChange={(event)=>setName(event.target.value)} className={inputStyle + " " + style.input} defaultValue={"Name"}/> 

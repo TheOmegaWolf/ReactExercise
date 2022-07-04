@@ -1,7 +1,12 @@
 .ContactContainer{
     padding: 35px 0 55px;
-    background-color: #263137;
     height: calc( 100% - 145px );
+}
+.light.ContactContainer{
+    background-color: #263137;
+}
+.dark.ContactContainer{
+    background-color: #232B38;
 }
 .ContactScdTxt{
     font-size: 24px;

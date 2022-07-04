@@ -4,12 +4,18 @@
     border: none;
     border-radius: 10px;
     padding:  10px 23px;
-    background-color: #62554F;
-    color: #f4f4f4;
     font-size: 18px;
     line-height: 31px;
     letter-spacing: 0.1em;
     cursor: pointer;
+}
+.light.btn{
+    background-color: #62554F;
+    color: #f4f4f4;
+}
+.dark.btn{
+    background-color: #D48A68;
+    color: #f4f4f4;
 }
 .btnMr{
     margin-right : 11px
